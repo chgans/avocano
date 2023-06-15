@@ -1,11 +1,11 @@
-name: ESlint
+name: Client linting
 on:
   push:
-    branches: [ main ]
+    branches: [ main-chgans ]
     paths:
       - 'client/**'
   pull_request:
-    branches: [ main ]
+    branches: [ main-chgans ]
     paths:
       - 'client/**'
 jobs:

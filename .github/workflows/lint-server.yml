@@ -1,11 +1,11 @@
-name: Python linting
+name: Server linting
 on:
   push:
-    branches: [ main ]
+    branches: [ main-chgans ]
     paths:
       - 'server/**'
   pull_request:
-    branches: [ main ]
+    branches: [ main-chgans ]
     paths:
       - 'server/**'
 jobs:
@@ -28,4 +28,4 @@ jobs:
       - name: Analysing the code with black
         timeout-minutes: 20
         run: |
-            black **/*.py
+            black --check --extend-exclude '/migrations/' .
