@@ -10,6 +10,16 @@ variable "region" {
   description = "Google Cloud Region"
 }
 
+  #   Bad   !!!
+variable    "bad_variable"
+{
+    default     = "bad"
+  type        = string
+    description = "Should trigger linter"
+}
+
+
+
 variable "instance_name" {
   type        = string
   default     = "psql"

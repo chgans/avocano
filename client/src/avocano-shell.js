@@ -61,6 +61,13 @@ export class AvocanoShell extends router(LitElement) {
     return styles;
   }
 
+    // Should trigger linter
+  static
+  get
+  bad_function() {
+      return styles;
+                    }
+
   constructor() {
     super();
     this.route = '';
