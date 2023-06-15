@@ -1,4 +1,4 @@
-name: ESlint
+name: Client linting
 on:
   push:
     branches: [ main-chgans ]
