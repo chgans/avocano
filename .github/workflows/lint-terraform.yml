@@ -1,11 +1,11 @@
 name: Terraform linting
 on:
   push:
-    branches: [ main ]
+    branches: [ main-chgans ]
     paths:
       - 'provisioning/terraform/**/*.tf'
   pull_request:
-    branches: [ main ]
+    branches: [ main-chgans ]
     paths:
       - 'provisioning/terraform/**/*.tf'
 
