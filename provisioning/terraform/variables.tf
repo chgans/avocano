@@ -28,7 +28,6 @@ variable "database_name" {
   description = "Cloud SQL database name"
 }
 
-
 variable "database_username" {
   type        = string
   default     = "server"

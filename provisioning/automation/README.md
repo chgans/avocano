@@ -15,7 +15,4 @@ Run periodically:
  * `gcloud builds submit --config provisioning/automation/cloudbuild.yaml`
     - runs `project-setup.sh` to create a new project
     - runs `deploy.cloudbuild.yaml`, which runs the same `bash setup.sh` as usual.
-    - runs `test.cloudbuild.yaml`, which runs client tests
     - deletes project, if all other steps succeeded.
-
-

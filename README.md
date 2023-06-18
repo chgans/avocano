@@ -1,8 +1,23 @@
+# Avocano fork
+
+This repository is a fork of https://github.com/GoogleCloudPlatform/avocano.
+I'm using it as an experiment to setup my own django powered website.
+
+Changes will focus on:
+- Removing the JS client and Firebase, as I'm planing to have a regular Django backend/frontend.
+- Enabling the CI features that are specific to the GoogleCloudPlatform project (please release, conventional commit, ...)
+- Validation of PR by deploying a project from scratch (see provisioning/automation/)
+- Validation of the upgrading the production project
+- Maybe more...
+
+Eventually this project will be set as read-only, and I will create my own project from scratch based on what i have achieved with my fork.
+
+Big thank you to the GoogleCloudPlatform team for providing me with a solid base.
+
 # 🥑 Avocano - a fake dropship sample website
 
 Avocano is a sample dropship/fake product website, combining: 
  
- * Firebase Hosting front end, written with [Lit](https://lit.dev/).
  * Cloud Run API backend, written with [Django REST Framework](https://www.django-rest-framework.org/),
  * Cloud SQL database, with migrations applied through Cloud Run Jobs.
  * Terraform and Cloud Build provisioning. 

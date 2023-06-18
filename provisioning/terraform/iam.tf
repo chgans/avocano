@@ -5,18 +5,11 @@ locals {
   # Helpers for the clunky formatting of these values
   automation_SA = "serviceAccount:${google_service_account.automation.email}"
   server_SA     = "serviceAccount:${google_service_account.server.email}"
-  client_SA     = "serviceAccount:${google_service_account.client.email}"
 }
 
 resource "google_service_account" "server" {
   account_id   = "api-backend"
   display_name = "API Backend service account"
-  depends_on   = [google_project_service.enabled]
-}
-
-resource "google_service_account" "client" {
-  account_id   = "client-frontend"
-  display_name = "Client Frontend service account"
   depends_on   = [google_project_service.enabled]
 }
 

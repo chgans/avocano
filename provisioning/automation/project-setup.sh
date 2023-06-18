@@ -70,8 +70,7 @@ else
         containerregistry.googleapis.com \
         cloudbuild.googleapis.com \
         cloudbilling.googleapis.com \
-        iam.googleapis.com \
-        firebase.googleapis.com
+        iam.googleapis.com
     stepdone
 
     stepdo "assign IAM owner role to Cloud Build service account"

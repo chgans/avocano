@@ -15,9 +15,6 @@
 # Labeler assigns GitHub labels to PRs based on changed files.
 
 # component labels are used in release notes.
-'component: client':
-- 'client/*'
-- 'client/**/*'
 'component: server':
 - 'server/*'
 - 'server/**/*'
