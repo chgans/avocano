@@ -1,4 +1,4 @@
-# Deploy a Django and Firebase Hosting Retail Website
+# Deploy a Django Retail Website
 
 ## Introduction
 
@@ -6,12 +6,11 @@ You’re going to build a sample application with multiple Cloud Run services:
 
 * A Django API server, using [Django REST Framework](https://www.django-rest-framework.org/) on Cloud Run
   * based by a Cloud SQL Postgres database
-* A NodeJS client front end, using the [Lit](https://lit.dev/) framework, on Firebase Hosting
 
 
 You'll use a script to deploy the required infrastucture, which itself will use Terraform and Cloud Build. 
 
-This walkthrough requires a number of dependencies, including `firebase`, `gcloud`, and `terraform`. All of which are available in the Google Cloud Shell environment. 
+This walkthrough requires a number of dependencies, including `gcloud`, and `terraform`. All of which are available in the Google Cloud Shell environment. 
 
 ## Project Setup
 
@@ -32,7 +31,7 @@ Before you begin, you will need a Google Cloud project.
 
 You'll now use a script to deploy the sample application. 
 
-To use the script, you will need to set a number of values for the `gcloud` and `firebase` tools to reference.
+To use the script, you will need to set a number of values for the `gcloud`tools to reference.
 
 1. Configure the Project and Region variables.
 

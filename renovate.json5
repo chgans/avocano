@@ -23,17 +23,6 @@
        "labels": ["semver: major"],
     },
     {
-      "matchPaths": [
-        "client/**",
-      ],
-      "lockFileMaintenance": {
-        "enabled": true,
-        "recreateClosed": true,
-      },
-      "pinVersions": false,
-      "rebaseWhen": "behind-base-branch",
-    },
-    {
       // Group runtime updates.
       // Applies to Dockerfile, cloudbuild.yaml, and others.
       "groupName": "Language & Runtimes",
@@ -55,20 +44,6 @@
       "groupName": "Python",
       "matchLanguages": ["python"],
       "matchUpdateTypes": ["minor", "patch"],
-    },
-    {
-      // Group non-major runtime dependencies for Node.js.
-      "groupName": "JS Runtime",
-      "matchLanguages": ["js", "node"],
-      "matchUpdateTypes": ["minor", "patch"],
-      // Scope the code to what we use in production operation.
-      "matchDepTypes": ["dependencies"],
-    },
-    {
-      // Group non-major build dependencies for Node.js.
-      "groupName": "JS Build",
-      "matchLanguages": ["js", "node"],
-      "matchDepTypes": ["devDependencies"],
     },
     {
       // Playwright dependencies require tight alignment.

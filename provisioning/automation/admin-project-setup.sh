@@ -34,12 +34,8 @@ gcloud services enable --project $PARENT_PROJECT  \
     cloudbilling.googleapis.com \
     cloudbuild.googleapis.com \
     iam.googleapis.com \
-    sqladmin.googleapis.com \
-    firebase.googleapis.com
+    sqladmin.googleapis.com
 stepdone
-
-stepdo "Create firebase builder"
-gcloud builds submit --config provisioning/firebase-builder.cloudbuild.yaml --no-source
 
 stepdo "Create service account"
 SA_NAME=ci-serviceaccount

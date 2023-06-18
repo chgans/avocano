@@ -34,11 +34,6 @@ def region():
 
 
 @pytest.fixture
-def firebase_url(project_id):
-    return f"https://{project_id}.web.app"
-
-
-@pytest.fixture
 def cloudrun_service(project_id, region, service_name):
     run_api = build("run", "v1")
     service_fqn = f"projects/{project_id}/locations/{region}/services/{service_name}"

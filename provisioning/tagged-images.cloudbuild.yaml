@@ -16,19 +16,6 @@
 # Must be used with Cloud Build's "Push new tag" Events
 
 steps:
-  - id: client build
-    name: "gcr.io/cloud-builders/docker"
-    dir: client
-    args:
-      - build
-      - --build-arg
-      - PROJECT_ID=$PROJECT_ID
-      - --build-arg
-      - AVOCANO_PURCHASE_MODE=$_PURCHASE_MODE
-      - "-t"
-      - gcr.io/$PROJECT_ID/$_CLIENT_IMAGE_NAME:$TAG_NAME
-      - "."
-      
   - id: server build
     name: gcr.io/k8s-skaffold/pack
     entrypoint: pack
@@ -40,11 +27,9 @@ steps:
 
 
 images:
-  - gcr.io/$PROJECT_ID/$_CLIENT_IMAGE_NAME:$TAG_NAME
   - gcr.io/$PROJECT_ID/$_SERVER_IMAGE_NAME:$TAG_NAME
 
 substitutions:
-  _CLIENT_IMAGE_NAME: client
   _SERVER_IMAGE_NAME: server
   _PURCHASE_MODE: ""
 

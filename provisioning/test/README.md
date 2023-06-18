@@ -7,9 +7,7 @@ They are either run against the current project, or a defined project (using the
 
 ## Test scope
 
-These tests use [playwright](https://playwright.dev/), and automate the clicking of website buttons to test client deployments. 
-
-There are also other tests, see `test/` for details. 
+See `test/` for details. 
 
 ## Local dev
 
@@ -17,8 +15,6 @@ Install the dependencies
 
 ```
 python -m pip install -r test/requirements.txt
-playwright install-deps  
-playwright install
 ```
 
 Then run the tests: 

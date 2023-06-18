@@ -5,7 +5,7 @@
 As with many GitHub projects, changes to this project are tested by GitHub actions. 
 
 These are defined in [`/.github/workflows`](/.github/workflows), and apply to specific parts of the repo. For example, 
-client side linting only runs when changes in `client/` are made. 
+server side linting only runs when changes in `server/` are made. 
 
 ## Cloud Build tests
 

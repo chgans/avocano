@@ -4,13 +4,6 @@
             "release-type": "simple"
         }
     },
-    "extra-files": [
-        {
-          "type": "json",
-          "path": "client/package.json",
-          "jsonpath": "$.version"
-        }
-    ],
     "changelog-sections": [
         {"type": "feat",    "section": "🥑 Features" },
         {"type": "feature", "section": "🥑 Features" },

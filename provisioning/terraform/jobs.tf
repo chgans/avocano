@@ -87,22 +87,3 @@ resource "google_cloud_run_v2_job" "migrate" {
   ]
 }
 
-resource "google_cloud_run_v2_job" "client" {
-  name     = "client"
-  location = var.region
-
-  template {
-    template {
-      containers {
-        image   = data.google_container_registry_image.client.image_url
-        command = ["firebase"]
-        args    = ["deploy", "--project", var.project_id, "--only", "hosting"]
-
-      }
-    }
-  }
-
-  depends_on = [
-    google_project_service.enabled
-  ]
-}
