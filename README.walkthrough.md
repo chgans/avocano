@@ -31,7 +31,7 @@ Before you begin, you will need a Google Cloud project.
 
 You'll now use a script to deploy the sample application. 
 
-To use the script, you will need to set a number of values for the `gcloud`tools to reference.
+To use the script, you will need to set a number of values for the `gcloud` tools to reference.
 
 1. Configure the Project and Region variables.
 
